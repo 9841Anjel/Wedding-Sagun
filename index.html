@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding Invitation — Anjel weds Sagun</title>
+  <link rel="stylesheet" href="couple.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&family=Noto+Serif+Devanagari:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="petals-wrap" aria-hidden="true">
+    <span class="petal p1">🌸</span><span class="petal p2">🌺</span>
+    <span class="petal p3">✦</span><span class="petal p4">🌼</span>
+    <span class="petal p5">🌸</span><span class="petal p6">✦</span>
+    <span class="petal p7">🌺</span><span class="petal p8">🌸</span>
+  </div>
+
+  <div id="sprinkleCanvas" aria-hidden="true"></div>
+  <div id="fireflyCanvas" aria-hidden="true"></div>
+
+  <!-- Envelope Reveal -->
+  <div id="envWrap" aria-hidden="true">
+    <div class="env-body">
+      <div class="env-fl"></div>
+      <div class="env-fr"></div>
+      <div class="env-fb"></div>
+      <div class="env-rule"></div>
+      <div class="env-card-inner">
+        <span class="env-ci-om">ॐ</span>
+        <p class="env-ci-names">Anjel &amp; Sagun</p>
+        <p class="env-ci-date">June 23, 2026 &nbsp;✦&nbsp; Asar 09, 2083 BS</p>
+      </div>
+      <div class="env-flap">
+        <div class="env-seal">A✦S</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading Screen -->
+  <div id="loadingScreen" aria-hidden="true">
+    <div class="ldg-rings-wrap">
+      <div class="ldg-ring ldg-r1"></div>
+      <div class="ldg-ring ldg-r2"></div>
+      <div class="ldg-ring ldg-r3"></div>
+      <span class="ldg-om">ॐ</span>
+    </div>
+    <div class="ldg-diyas">🪔 &nbsp; ✦ &nbsp; 🪔</div>
+    <p class="ldg-title">Anjel weds Sagun</p>
+    <p class="ldg-sub">Preparing your invitation…</p>
+  </div>
+
+  <div class="name-screen" id="nameScreen">
+    <div class="ns-card">
+      <div class="ns-om-wrap"><span class="ns-om">ॐ</span></div>
+      <div class="ns-deco">❧ &nbsp; ✦ &nbsp; ❧</div>
+      <div class="ns-rose">🌹</div>
+      <h1 class="ns-title" id="nsTitleEl">Anjel weds Sagun</h1>
+      <p class="ns-date">June 23, 2026 &nbsp;•&nbsp; Asar 09, 2083 BS</p>
+      <div class="ns-rule">⸻ ✦ ⸻</div>
+      <p class="ns-prompt">Please enter your name so we may<br/>address your personal invitation</p>
+      <input type="text" id="guestInput" class="ns-input" placeholder="Your full name…" maxlength="50" autocomplete="off" />
+      <p class="ns-side-label">तपाईं कुन पक्षबाट हुनुहुन्छ? — Which side?</p>
+      <div class="ns-side-btns">
+        <button class="ns-side-btn" id="groomSideBtn">बेहुला पट्टिको<br/><span>Groom's Side</span></button>
+        <button class="ns-side-btn" id="brideSideBtn">बेहुली पट्टिको<br/><span>Bride's Side</span></button>
+      </div>
+      <button id="guestSubmitBtn" class="ns-btn">Open My Invitation &nbsp;✦</button>
+      <div class="ns-deco" style="margin-top:18px;">❧ &nbsp; ✦ &nbsp; ❧</div>
+    </div>
+  </div>
+
+  <main class="scene" id="mainScene">
+    <section class="invitation-wrapper">
+      <div class="invitation-book" id="invitationBook">
+
+        <div class=" page cover-page">
+          <div class="flower-corner fc-tl" aria-hidden="true"></div>
+          <div class="flower-corner fc-tr" aria-hidden="true"></div>
+          <div class="flower-corner fc-bl" aria-hidden="true"></div>
+          <div class="flower-corner fc-br" aria-hidden="true"></div>
+          <div class="diya-corner dc-tl" aria-hidden="true">🪔</div>
+          <div class="diya-corner dc-tr" aria-hidden="true">🪔</div>
+          <div class="diya-corner dc-bl" aria-hidden="true">🪔</div>
+          <div class="diya-corner dc-br" aria-hidden="true">🪔</div>
+          <div class="cover-texture"></div>
+          <div class="ornate-frame"></div>
+          <div class="mandala-wrap" aria-hidden="true">
+            <svg class="mandala-svg" viewBox="-200 -200 400 400" xmlns="http://www.w3.org/2000/svg">
+              <g class="m-spin-cw">
+                <ellipse cx="0" cy="-130" rx="9" ry="22" fill="rgba(212,168,67,0.12)" stroke="#D4A843" stroke-width="0.7"/>
+                <ellipse cx="0" cy="-130" rx="9" ry="22" fill="rgba(212,168,67,0.12)" stroke="#D4A843" stroke-width="0.7" transform="rotate(45)"/>
+                <ellipse cx="0" cy="-130" rx="9" ry="22" fill="rgba(212,168,67,0.12)" stroke="#D4A843" stroke-width="0.7" transform="rotate(90)"/>
+                <ellipse cx="0" cy="-130" rx="9" ry="22" fill="rgba(212,168,67,0.12)" stroke="#D4A843" stroke-width="0.7" transform="rotate(135)"/>
+                <ellipse cx="0" cy="-130" rx="9" ry="22" fill="rgba(212,168,67,0.12)" stroke="#D4A843" stroke-width="0.7" transform="rotate(180)"/>
+                <ellipse cx="0" cy="-130" rx="9" ry="22" fill="rgba(212,168,67,0.12)" stroke="#D4A843" stroke-width="0.7" transform="rotate(225)"/>
+                <ellipse cx="0" cy="-130" rx="9" ry="22" fill="rgba(212,168,67,0.12)" stroke="#D4A843" stroke-width="0.7" transform="rotate(270)"/>
+                <ellipse cx="0" cy="-130" rx="9" ry="22" fill="rgba(212,168,67,0.12)" stroke="#D4A843" stroke-width="0.7" transform="rotate(315)"/>
+                <circle cx="0" cy="0" r="153" fill="none" stroke="#D4A843" stroke-width="0.5" stroke-dasharray="5 7" opacity="0.35"/>
+                <circle cx="0" cy="0" r="140" fill="none" stroke="#D4A843" stroke-width="0.4" stroke-dasharray="3 5" opacity="0.25"/>
+              </g>
+              <g class="m-spin-ccw">
+                <ellipse cx="0" cy="-88" rx="6" ry="17" fill="rgba(240,208,112,0.1)" stroke="#F0D070" stroke-width="0.6"/>
+                <ellipse cx="0" cy="-88" rx="6" ry="17" fill="rgba(240,208,112,0.1)" stroke="#F0D070" stroke-width="0.6" transform="rotate(30)"/>
+                <ellipse cx="0" cy="-88" rx="6" ry="17" fill="rgba(240,208,112,0.1)" stroke="#F0D070" stroke-width="0.6" transform="rotate(60)"/>
+                <ellipse cx="0" cy="-88" rx="6" ry="17" fill="rgba(240,208,112,0.1)" stroke="#F0D070" stroke-width="0.6" transform="rotate(90)"/>
+                <ellipse cx="0" cy="-88" rx="6" ry="17" fill="rgba(240,208,112,0.1)" stroke="#F0D070" stroke-width="0.6" transform="rotate(120)"/>
+                <ellipse cx="0" cy="-88" rx="6" ry="17" fill="rgba(240,208,112,0.1)" stroke="#F0D070" stroke-width="0.6" transform="rotate(150)"/>
+                <ellipse cx="0" cy="-88" rx="6" ry="17" fill="rgba(240,208,112,0.1)" stroke="#F0D070" stroke-width="0.6" transform="rotate(180)"/>
+                <ellipse cx="0" cy="-88" rx="6" ry="17" fill="rgba(240,208,112,0.1)" stroke="#F0D070" stroke-width="0.6" transform="rotate(210)"/>
+                <ellipse cx="0" cy="-88" rx="6" ry="17" fill="rgba(240,208,112,0.1)" stroke="#F0D070" stroke-width="0.6" transform="rotate(240)"/>
+                <ellipse cx="0" cy="-88" rx="6" ry="17" fill="rgba(240,208,112,0.1)" stroke="#F0D070" stroke-width="0.6" transform="rotate(270)"/>
+                <ellipse cx="0" cy="-88" rx="6" ry="17" fill="rgba(240,208,112,0.1)" stroke="#F0D070" stroke-width="0.6" transform="rotate(300)"/>
+                <ellipse cx="0" cy="-88" rx="6" ry="17" fill="rgba(240,208,112,0.1)" stroke="#F0D070" stroke-width="0.6" transform="rotate(330)"/>
+                <circle cx="0" cy="0" r="108" fill="none" stroke="#F0D070" stroke-width="0.5" stroke-dasharray="4 5" opacity="0.3"/>
+                <circle cx="0" cy="0" r="95" fill="none" stroke="#D4A843" stroke-width="0.4" stroke-dasharray="2 4" opacity="0.25"/>
+              </g>
+              <g class="m-spin-cw2">
+                <circle cx="0" cy="-60" r="3.5" fill="rgba(212,168,67,0.3)" stroke="#D4A843" stroke-width="0.5"/>
+                <circle cx="0" cy="-60" r="3.5" fill="rgba(212,168,67,0.3)" stroke="#D4A843" stroke-width="0.5" transform="rotate(22.5)"/>
+                <circle cx="0" cy="-60" r="3.5" fill="rgba(212,168,67,0.3)" stroke="#D4A843" stroke-width="0.5" transform="rotate(45)"/>
+                <circle cx="0" cy="-60" r="3.5" fill="rgba(212,168,67,0.3)" stroke="#D4A843" stroke-width="0.5" transform="rotate(67.5)"/>
+                <circle cx="0" cy="-60" r="3.5" fill="rgba(212,168,67,0.3)" stroke="#D4A843" stroke-width="0.5" transform="rotate(90)"/>
+                <circle cx="0" cy="-60" r="3.5" fill="rgba(212,168,67,0.3)" stroke="#D4A843" stroke-width="0.5" transform="rotate(112.5)"/>
+                <circle cx="0" cy="-60" r="3.5" fill="rgba(212,168,67,0.3)" stroke="#D4A843" stroke-width="0.5" transform="rotate(135)"/>
+                <circle cx="0" cy="-60" r="3.5" fill="rgba(212,168,67,0.3)" stroke="#D4A843" stroke-width="0.5" transform="rotate(157.5)"/>
+                <circle cx="0" cy="-60" r="3.5" fill="rgba(212,168,67,0.3)" stroke="#D4A843" stroke-width="0.5" transform="rotate(180)"/>
+                <circle cx="0" cy="-60" r="3.5" fill="rgba(212,168,67,0.3)" stroke="#D4A843" stroke-width="0.5" transform="rotate(202.5)"/>
+                <circle cx="0" cy="-60" r="3.5" fill="rgba(212,168,67,0.3)" stroke="#D4A843" stroke-width="0.5" transform="rotate(225)"/>
+                <circle cx="0" cy="-60" r="3.5" fill="rgba(212,168,67,0.3)" stroke="#D4A843" stroke-width="0.5" transform="rotate(247.5)"/>
+                <circle cx="0" cy="-60" r="3.5" fill="rgba(212,168,67,0.3)" stroke="#D4A843" stroke-width="0.5" transform="rotate(270)"/>
+                <circle cx="0" cy="-60" r="3.5" fill="rgba(212,168,67,0.3)" stroke="#D4A843" stroke-width="0.5" transform="rotate(292.5)"/>
+                <circle cx="0" cy="-60" r="3.5" fill="rgba(212,168,67,0.3)" stroke="#D4A843" stroke-width="0.5" transform="rotate(315)"/>
+                <circle cx="0" cy="-60" r="3.5" fill="rgba(212,168,67,0.3)" stroke="#D4A843" stroke-width="0.5" transform="rotate(337.5)"/>
+                <circle cx="0" cy="0" r="72" fill="none" stroke="#D4A843" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.4"/>
+                <circle cx="0" cy="0" r="50" fill="none" stroke="#F0D070" stroke-width="0.5" stroke-dasharray="2 3" opacity="0.3"/>
+                <circle cx="0" cy="0" r="32" fill="none" stroke="#D4A843" stroke-width="0.7" opacity="0.3"/>
+                <circle cx="0" cy="0" r="18" fill="none" stroke="#F0D070" stroke-width="0.5" opacity="0.35"/>
+              </g>
+              <circle cx="0" cy="0" r="7" fill="rgba(212,168,67,0.25)" stroke="#D4A843" stroke-width="0.8"/>
+              <circle cx="0" cy="0" r="3" fill="rgba(240,208,112,0.5)"/>
+            </svg>
+          </div>
+          <span class="c-corner tl">✦</span>
+          <span class="c-corner tr">✦</span>
+          <span class="c-corner bl">✦</span>
+          <span class="c-corner br">✦</span>
+          <div class="glow-om-wrap" aria-hidden="true"><span class="glow-om">ॐ</span></div>
+
+          <div class="cover-content">
+            <p class="np-header">॥ श्री गणेशाय नमः ॥</p>
+            <p class="np-subheader">हार्दिक निमन्त्रणा</p>
+            <p class="together-txt">❧ &nbsp; Together with their families &nbsp; ❧</p>
+            <h1 class="weds-title" id="coverTitleEl">Anjel weds Sagun</h1>
+            <p class="subtitle-banner">A Celebration of Love &amp; Union</p>
+            <div class="gold-rule">⸻ &nbsp; 💍 &nbsp; ⸻</div>
+
+            <div class="couple-photos-row">
+              <div class="person-block">
+                <div class="photo-ring-wrap">
+                  <svg class="ring-draw-svg" viewBox="0 0 150 150">
+                    <circle class="ring-draw-circle" id="ring1" cx="75" cy="75" r="68"/>
+                  </svg>
+                  <div class="photo-ring" id="photo1Frame" title="Click to upload Anjel's photo">
+                    <img id="photo1Img" src="groom.jpg" alt="Anjel" class="person-img" />
+                    <div class="upload-overlay">📷</div>
+                  </div>
+                </div>
+                <input type="file" id="photo1Input" accept="image/*" hidden />
+                <p class="person-first">Anjel</p>
+                <p class="person-last">Bhattarai</p>
+              </div>
+
+              <div class="heart-sep"><span class="big-heart">💕</span></div>
+
+              <div class="person-block">
+                <div class="photo-ring-wrap">
+                  <svg class="ring-draw-svg" viewBox="0 0 150 150">
+                    <circle class="ring-draw-circle" id="ring2" cx="75" cy="75" r="68"/>
+                  </svg>
+                  <div class="photo-ring" id="photo2Frame" title="Click to upload Sagun's photo">
+                    <img id="photo2Img" src="bride.jpg" alt="Sagun" class="person-img" />
+                    <div class="upload-overlay">📷</div>
+                  </div>
+                </div>
+                <input type="file" id="photo2Input" accept="image/*" hidden />
+                <p class="person-first">Sagun</p>
+                <p class="person-last">Pokharel</p>
+              </div>
+            </div>
+
+            <div class="date-row">
+              <span class="date-en">June 23, 2026</span>
+              <span class="date-bullet">•</span>
+              <span class="date-np">Asar 09, 2083 BS</span>
+            </div>
+            <p class="venue-line">Subhashree Party Palace &nbsp;•&nbsp; Kadaghari Manohara, Kathmandu</p>
+            <div class="gold-rule" style="margin-top:2px;">❧ &nbsp; ✦ &nbsp; ❧</div>
+
+            <div class="btn-group">
+              <button id="openCardBtn" class="btn-primary">✉ &nbsp;Open Invitation</button>
+              <button id="playMusicBtn" class="btn-secondary">▶ &nbsp;Play Music</button>
+            </div>
+          </div>
+        </div>
+
+        <div class=" page inside-page">
+
+          <div class=" panel panel-left">
+            <span class="p-corner tl">✦</span>
+            <span class="p-corner bl">✦</span>
+            <p class="panel-deco">❧ &nbsp; ✦ &nbsp; ❧</p>
+            <h2 class="panel-heading" id="panelHeadingEl">You Are Cordially Invited</h2>
+            <div class="panel-rule">⸻ 🌸 ⸻</div>
+            <div class="couple-banner reveal">
+              <img src="ring.jpg" alt="" class="couple-banner-img sketch-img" id="bannerImg" />
+              <svg class="sketch-frame-svg" preserveAspectRatio="none">
+                <rect class="sketch-frame-rect" id="bannerRect" x="2" y="2" width="calc(100% - 4px)" height="calc(100% - 4px)" rx="14"/>
+              </svg>
+              <div class="couple-banner-overlay">
+                <span class="cb-tagline">❧ &nbsp; Together Forever &nbsp; ❧</span>
+                <span class="cb-names">Anjel &amp; Sagun</span>
+                <span class="cb-date">June 24, 2026 &nbsp;✦&nbsp; Asar 10, 2083 BS</span>
+              </div>
+            </div>
+            <p class="dear-line">
+              Dear &nbsp;<span id="guestNameDisplay" class="guest-cursive">Valued Guest</span>,
+            </p>
+            <p class="side-badge" id="sideBadgeDisplay"></p>
+            <p class="invite-body reveal" id="inviteBodyEl">
+              हर्षले भरिएका हृदयसँगै, हामी तपाईंलाई हाम्रो विवाह उत्सवको यस शुभ अवसरमा उपस्थित हुन हार्दिक निमन्त्रणा गर्दछौं। तपाईंको आशीर्वाद र स्नेहपूर्ण उपस्थितिले यो सुन्दर दिनलाई हाम्रा लागि साँच्चै सम्पूर्ण र सदा स्मरणीय बनाउनेछ।
+            </p>
+            <div class="details-block reveal">
+              <p class="details-heading">✦ &nbsp; कार्यक्रमको विवरण</p>
+              <div class="event-grid">
+                <div class="ev-card accent-burgundy">
+                  <span class="ev-icon">📅</span>
+                  <span class="ev-key">मिति</span>
+                  <span class="ev-val">June 23, 2026<br/><em>असार ०९, २०८३ बि.सं.</em></span>
+                </div>
+                <div class="ev-card accent-green">
+                  <span class="ev-icon">🕔</span>
+                  <span class="ev-key">समय</span>
+                  <span class="ev-val">साँझ ४:०० बजेदेखि<br/><em>स्वागत समारोह सहित</em></span>
+                </div>
+                <div class="ev-card ev-wide accent-gold">
+                  <span class="ev-icon">📍</span>
+                  <span class="ev-key">स्थान तथा ठेगाना</span>
+                  <span class="ev-val">Subhashree Party Palace<br/>Kadaghari Manohara,<br/>Kathmandu, Nepal</span>
+                </div>
+              </div>
+            </div>
+            <blockquote class="blessing-quote reveal">
+              "दुई फूल एउटै माला, दुई मन एउटै जीवन —<br/>तपाईंको आशीर्वाद नै हाम्रो सबभन्दा ठूलो उपहार हो।"
+            </blockquote>
+            <div class="left-actions">
+              <button id="closeCardBtn" class="btn-secondary sm">✕ &nbsp;Close</button>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdkoQ6EFaNXkgu2rbe3h_xfOTEShKmqMh4yx9UxbcC__8PNOg/viewform?usp=publish-editor" target="_blank" class="btn-primary sm">✉ &nbsp;RSVP — उपस्थितिको जानकारी</a>
+            </div>
+          </div>
+
+          <div class=" panel panel-right">
+            <span class="p-corner tr">✦</span>
+            <span class="p-corner br">✦</span>
+            <div class="venue-card reveal">
+              <img src="venue.jpg" alt="Wedding Venue" class="venue-img sketch-img" id="venueImg" />
+              <svg class="sketch-frame-svg" preserveAspectRatio="none">
+                <rect class="sketch-frame-rect" id="venueRect" x="2" y="2" width="calc(100% - 4px)" height="calc(100% - 4px)" rx="10"/>
+              </svg>
+              <p class="venue-cap">📍 &nbsp;Subhashree Party Palace, Kadaghari Manohara</p>
+              <a href="https://maps.google.com/?q=M9VF%2BGRR+Unnamed+Road+Kageshwori+Manohara+44600+Nepal" target="_blank" class="btn-primary directions-btn">🗺 &nbsp;Get Directions</a>
+            </div>
+            <div class="mini-banner">
+              <p class="mini-weds">Anjel weds Sagun</p>
+              <p class="mini-date">June 23, 2026 &nbsp;•&nbsp; Asar 09, 2083 BS</p>
+            </div>
+            <div class="timeline-box reveal">
+              <p class="tl-heading">✦ &nbsp; कार्यक्रम तालिका</p>
+              <ul class="tl-list">
+                <li class="tl-item">
+                  <div class="tl-node"><div class="tl-dot"></div></div>
+                  <span class="tl-icon">🪔</span>
+                  <div class="tl-body">
+                    <span class="tl-time">4:00 PM</span>
+                    <span class="tl-evt">अतिथि स्वागत</span>
+                  </div>
+                </li>
+                <li class="tl-item">
+                  <div class="tl-node"><div class="tl-dot"></div></div>
+                  <span class="tl-icon">💍</span>
+                  <div class="tl-body">
+                    <span class="tl-time">5:00 PM</span>
+                    <span class="tl-evt">विवाह समारोह</span>
+                  </div>
+                </li>
+                <li class="tl-item">
+                  <div class="tl-node"><div class="tl-dot"></div></div>
+                  <span class="tl-icon">🎊</span>
+                  <div class="tl-body">
+                    <span class="tl-time">7:00 PM</span>
+                    <span class="tl-evt">भोज तथा आशीर्वाद</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="countdown-box reveal">
+              <div class="cd-header">
+                <span class="cd-icon-top">⏳</span>
+                <p class="cd-label">Counting Down to the Big Day</p>
+                <p class="cd-subdate">June 23, 2026 &nbsp;·&nbsp; Asar 09, 2083 BS</p>
+              </div>
+              <div class="cd-grid">
+                <div class="cd-unit">
+                  <div class="cd-num-wrap"><span id="days">--</span></div>
+                  <small>Days</small>
+                </div>
+                <div class="cd-sep">✦</div>
+                <div class="cd-unit">
+                  <div class="cd-num-wrap"><span id="hours">--</span></div>
+                  <small>Hours</small>
+                </div>
+                <div class="cd-sep">✦</div>
+                <div class="cd-unit">
+                  <div class="cd-num-wrap"><span id="minutes">--</span></div>
+                  <small>Mins</small>
+                </div>
+                <div class="cd-sep">✦</div>
+                <div class="cd-unit cd-secs">
+                  <div class="cd-num-wrap"><span id="seconds">--</span></div>
+                  <small>Secs</small>
+                </div>
+              </div>
+              <p class="cd-footer">💕 &nbsp;We can't wait to celebrate with you&nbsp; 💕</p>
+            </div>
+            <div class="rsvp-panel">
+              <p class="rsvp-title">🙏 &nbsp;उपस्थितिको जानकारी</p>
+              <p class="rsvp-sub">Will you be joining us? Please let us know!</p>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdkoQ6EFaNXkgu2rbe3h_xfOTEShKmqMh4yx9UxbcC__8PNOg/viewform?usp=publish-editor" target="_blank" class="btn-primary rsvp-big-btn">✉ &nbsp;RSVP Now &nbsp;✦</a>
+            </div>
+            <div class="floral-strip">🌸 &nbsp; 🌺 &nbsp; 🌼 &nbsp; 🌸 &nbsp; 🌺 &nbsp; 🌼 &nbsp; 🌸</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <audio id="bgMusic" loop autoplay>
+    <source src="music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
